@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telly AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0E0E0E;
+            color: white;
+            margin: 0;
+            padding: 0px;
+        }
+
+        .container {
+          min-height: 100vh;
+            /* max-width: 400px; */
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+        }
+        .top {
+          padding-inline: 18px;
+          padding-bottom: 1px;
+          padding-top: 40px;
+          background: linear-gradient(#4C4E53, #272A33);
+        }
+        .bottom {
+          padding: 18px;
+          flex: 1;
+        }
+        .footer {
+          padding: 18px;
+          width: 100%;
+          color: lightgray;
+          text-align: center;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-block: 10px;
+        }
+
+        .logo-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f39c12, #e74c3c);
+            border-radius: 20px;
+            margin: 0 auto 10px;
+            position: relative;
+        }
+
+        .logo-icon::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 5px solid white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .logo-icon::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 10px;
+            background-color: white;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 200;
+            margin: 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 10px;
+            max-width: 400px;
+            margin-inline: auto;
+        }
+
+        button {
+          background-color: #414350;
+          color: white;
+          border: none;
+          padding: 10px;
+          width: 22%;
+          border-radius: 10px;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .button {
+          background-color: #414350;
+          color: white;
+          border: none;
+          padding: 10px;
+          width: 22%;
+          border-radius: 10px;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .button-image {
+          width: 22px;
+          height: 22px;
+          vertical-align: middle;
+          margin-bottom: 8px;
+        }
+
+        .info-box {
+          max-width: 400px;
+          background-color: #1C1C1E;
+          border-radius: 10px;
+          padding: 15px;
+          margin-bottom: 10px;
+          margin-inline: auto;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .social-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="top">
+        <div class="logo">
+          <img src="telly-rounded.jpg" class="logo-icon" alt="App Icon">
+          <h1>Telly AI</h1>
+          <p>Stop wasting your life on hold.</p>
+        </div>
+        <div class="buttons">
+          <a class="button" href="sms:+6159754270?&body=Hi,%20I'd%20like%20to%20sign%20up%20for%20Telly.">
+            <img src="message.fill.svg"class="button-image" alt="Message Icon">
+            Message
+          </a>
+          <a class="button" href="https://testflight.apple.com/join/example">
+            <img src="square.and.arrow.down.fill.svg"class="button-image" alt="Download Icon">
+            Beta
+          </a>
+          <a class="button" href="tel:+16159754270">
+            <img src="phone.fill.svg"class="button-image" alt="Phone Icon">
+            Call
+          </a>
+          <a class="button" href="mailto:leaveylabs@gmail.com">
+            <img src="envelope.fill.svg"class="button-image" alt="Envelope Icon">
+            Mail
+          </a>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="info-box">
+          <h2>Memo</h2>
+          <p>Your life is more valuable than that.</p>
+        </div>
+        
+
+        <div class="info-box">
+          <a href="sms:+6159754270?&body=Hi,%20I'd%20like%20to%20sign%20up%20for%20Telly." class="social-link">
+            <p style="color: white">Phone</p>
+            <p>(615) 975-4270</p>
+          </a>
+        </div>
+
+        <div class="info-box">
+          <p onclick="navigator.share({ title: '', text: '', url: 'https://heytelly.com' })" class="social-link">
+            Share Telly
+          </p>
+        </div>
+        
+        <div class="info-box">
+          <a href="https://www.instagram.com/heytellyai" class="social-link">
+            <p style="color: white">Instagram</p>
+            <p>@heytellyai</p>
+          </a>
+          <hr style="margin: 15px 0; border: none; border-top: 0.5px solid #6a6a6a;">
+          <a href="https://www.tiktok.com/@heytelly.com" class="social-link">
+            <p style="color: white">TikTok</p>
+            <p>@heytelly.com</p>
+          </a>
+        </div>
+      </div>
+      <div class="footer">
+        Made with 🧡 in NYC. © 2024 Leavey Labs. <a href="privacy.html" class="social-link">Privacy.</a> 
+        <!-- <a href="terms.html" class="social-link">Terms.</a> -->
+      </div>
+    </div>
+</body>
+</html>
